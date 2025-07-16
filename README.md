@@ -1,0 +1,2 @@
+# HDLbits
+verilog practice
