@@ -17,7 +17,7 @@ module top_module (
             4'd3: out = data3;
             4'd4: out = data4;
             4'd5: out = data5;
-        	default: out = 0;
+            default: out = 0;
         endcase
     end
 
