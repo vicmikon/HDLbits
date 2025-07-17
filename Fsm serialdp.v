@@ -11,7 +11,7 @@ module top_module(
     parameter IDLE = 3'd0, START = 3'd1, DATA = 3'd2, STOP = 3'd3, ERROR = 3'd4;
     reg [2:0] c_state, n_state;
     reg [3:0] cnt;
-    reg [8:0] store;
+    reg [7:0] store;
     wire rst_parity;
     reg odd;
     
@@ -63,7 +63,7 @@ module top_module(
     
     always @(posedge clk) begin
         if (reset) begin
-            store <= 9'd0;
+            store <= 8'd0;
         end
         else begin
             if (n_state == START || n_state == DATA)
@@ -79,7 +79,7 @@ module top_module(
         end
         else begin
             if (n_state == STOP && odd)
-                out_byte <= store[7:0];
+                out_byte <= store;
             else
                 out_byte <= out_byte;
         end
