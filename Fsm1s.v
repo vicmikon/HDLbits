@@ -17,7 +17,7 @@ module top_module(clk, reset, in, out);
             present_state <= B;
         end
         else begin
-        	// State flip-flops
+            // State flip-flops
             present_state <= next_state;
         end
     end
