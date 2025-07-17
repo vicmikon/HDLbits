@@ -6,7 +6,7 @@ module top_module(
     output reg out_alwaysblock
 );
     
-	assign out_assign = a & b;
+    assign out_assign = a & b;
     
     always @(*) begin
         out_alwaysblock = a & b;
