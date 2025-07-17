@@ -3,7 +3,7 @@ module top_module (
     input [7:0] in,
     output reg [2:0] pos );
     
-	always @(*) begin
+    always @(*) begin
         casez (in)
             8'bzzzzzzz1: pos = 0;
             8'bzzzzzz1z: pos = 1;
