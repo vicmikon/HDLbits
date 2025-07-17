@@ -40,14 +40,14 @@ module top_module(
             store <= 24'd0;
         end
         else begin
-        	case(c_state)
+            case(c_state)
                 BYTE1: store[23:16] = in[3] ? in : 8'd0;
                 BYTE2: store[15:8] = in;
                 BYTE3: store[7:0] = in;
                 DONE: store[23:16] = in[3] ? in : 8'd0;
-            	default: store = 24'd0;
-        	endcase
-    	end
+                default: store = 24'd0;
+            endcase
+        end
     end
     
     assign out_bytes = (c_state == DONE) ? store : 24'd0;
