@@ -11,7 +11,7 @@ module top_module(
     always @(*) begin
         case (c_state)
             A: n_state = in ? B : A;
-			B: n_state = in ? B : C;
+            B: n_state = in ? B : C;
             C: n_state = in ? D : A;
             D: n_state = in ? B : C;
             default: n_state = A;
