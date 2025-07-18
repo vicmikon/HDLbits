@@ -1,5 +1,5 @@
 module top_module();
-	reg clk;
+    reg clk;
     reg in;
     reg [2:0] s;
     wire out;
