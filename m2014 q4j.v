@@ -6,7 +6,7 @@ module top_module (
     wire cin;
     wire [3:0] cout;
     
-	FA FA1(
+    FA FA1(
         .x(x[0]),
         .y(y[0]),
         .cin(cin),
