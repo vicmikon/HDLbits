@@ -8,7 +8,7 @@ module top_module (
     reg [31:0] out_temp;
     
     always @(posedge clk) begin
-		out_temp <= in;
+        out_temp <= in;
     end
     
     always @(posedge clk) begin
