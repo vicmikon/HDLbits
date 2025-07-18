@@ -1,5 +1,6 @@
 module top_module ( );
     reg clk;
+    
     dut inst (.clk(clk));
     
     initial begin
