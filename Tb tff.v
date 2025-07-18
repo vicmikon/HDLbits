@@ -1,5 +1,5 @@
 module top_module ();
-	reg clk;
+    reg clk;
     reg reset;
     reg t;
     wire q;
@@ -8,7 +8,6 @@ module top_module ();
               .reset(reset),
               .t(t),
               .q(q));
-    
     initial begin
         clk = 0;
         reset = 1;
@@ -20,5 +19,4 @@ module top_module ();
     always begin
         #5 clk = ~clk;
     end
-    
 endmodule
